@@ -19,7 +19,6 @@ class UserInfoViewController: UIViewController {
         }
     }
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -28,26 +27,34 @@ class UserInfoViewController: UIViewController {
     // MARK: - internal functions
     private func updateUI() {
         nameLabel?.text = user.name
-        emailLabel?.text = "email: " + user.email
+        emailLabel?.text = user.email
     }
     
+    // MARK: - actions
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         Storage.user = nil
+        Storage.image = nil
         appDelegate.openView()
     }
     
+    private func getImage() {
+        if Storage.image != nil {
+            spinner.stopAnimating()
+            imageView.image = Storage.image
+        } else {
+            GettingImage.fetchImage(with: user.avatar) {image in
+                Storage.image = image
+                self.getImage()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        spinner.startAnimating()
         // загрузка аватарки
-        GettingImage.fetchImage(with: user.avatar) { image in
-            self.imageView.image = image
-            self.spinner.stopAnimating()
-        }
+        spinner.startAnimating()
+        getImage()
         GettingImage.setRounded(imageView)
     }
-
-    
 }

@@ -26,7 +26,7 @@ class PasswordViewController: UIViewController, NVActivityIndicatorViewable {
     // MARK: -actions
     @IBAction func creatingNextButton(_ sender: UITextField) {
         if let text = passwordTextField.text, !text.isEmpty {
-            let nextButton = UIBarButtonItem(title: "Далее", style: UIBarButtonItemStyle.done, target: self, action: #selector(PasswordViewController.authorize(sender:)))
+            let nextButton = UIBarButtonItem(title: "Далее", style: UIBarButtonItemStyle.done, target: self, action: #selector(PasswordViewController.authorize))
             navigationItem.rightBarButtonItem = nextButton
         } else {
             navigationItem.rightBarButtonItem = nil
@@ -44,7 +44,7 @@ class PasswordViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     // авторизация пользователя
-    func authorize(sender: UIBarButtonItem) {
+    func authorize() {
         let password = passwordTextField.text!
         if !User.isValidPassword(password){
             showAlert("Ошибка", "Ваш пароль должен содержать не менее 4 символов")
@@ -64,15 +64,5 @@ class PasswordViewController: UIViewController, NVActivityIndicatorViewable {
             }
         }
     }
-    
-    // MARK: - navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier! {
-        case Constants.userInfoSegue:
-            let destinationVC = segue.destination as! UINavigationController
-        default: break
-        }
-    }
-
 }
 

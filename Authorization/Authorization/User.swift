@@ -9,24 +9,6 @@
 import Alamofire
 import ObjectMapper
 
-// функуции будут видны для всех UIViewController'ов
-extension UIViewController {
-    
-    //функция alert
-    func showAlert(_ alertTitle: String, _ alertMessage: String) {
-        let alertView = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "ОK", style: .default, handler: nil))
-        present(alertView, animated:true, completion:nil)
-    }
-    
-    static let active = UIColor(red: 0/255, green: 204/255, blue: 255/255, alpha: 1)
-    static let inActive = UIColor(red: 112/255, green: 125/255, blue: 164/255, alpha: 1)
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
-
 struct User: Mappable {
     
     var id = 0
