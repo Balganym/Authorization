@@ -79,15 +79,4 @@ class EmailViewController: UIViewController {
         default: break
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.emailTextField.delegate = self as? UITextFieldDelegate
-    }
-    
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        textField.resignFirstResponder()
-        showPassword()
-        return true
-    }
 }
