@@ -48,7 +48,7 @@ class PasswordViewController: UIViewController, NVActivityIndicatorViewable {
         let password = passwordTextField.text!
         if !User.isValidPassword(password){
             showAlert("Ошибка", "Ваш пароль должен содержать не менее 4 символов")
-        }else{
+        } else {
             dismissKeyboard()
             startAnimating()
             // запрос на сервак

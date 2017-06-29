@@ -42,7 +42,7 @@ class UserInfoViewController: UIViewController {
             spinner.stopAnimating()
             imageView.image = Storage.image
         } else {
-            GettingImage.fetchImage(with: user.avatar) {image in
+            GettingImage.fetchImage(with: user.avatar) { image in
                 Storage.image = image
                 self.getImage()
             }

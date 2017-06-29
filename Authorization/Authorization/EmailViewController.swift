@@ -15,7 +15,7 @@ extension UIViewController {
     func showAlert(_ alertTitle: String, _ alertMessage: String) {
         let alertView = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "ОK", style: .default, handler: nil))
-        present(alertView, animated:true, completion:nil)
+        present(alertView, animated: true, completion: nil)
     }
     
     static let active = UIColor(red: 0/255, green: 204/255, blue: 255/255, alpha: 1)
@@ -42,7 +42,7 @@ class EmailViewController: UIViewController {
         if let text = emailTextField.text, !text.isEmpty {
             let rightBarButton = UIBarButtonItem(title: "Далее", style: UIBarButtonItemStyle.done, target: self, action: #selector(EmailViewController.showPassword))
             navigationItem.rightBarButtonItem = rightBarButton
-        }else {
+        } else {
             navigationItem.rightBarButtonItem = nil
         }
     }
@@ -51,6 +51,7 @@ class EmailViewController: UIViewController {
     @IBAction func textFieldIsActive(_ sender: UITextField) {
         textFieldBottom.backgroundColor = UIViewController.active
     }
+    
     //меняем цвет под'view'шки (не активен)
     @IBAction func textFieldIsInactive(_ sender: UITextField) {
         textFieldBottom.backgroundColor = UIViewController.inActive
@@ -77,5 +78,16 @@ class EmailViewController: UIViewController {
             destinationVC.email = sender as! String
         default: break
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.emailTextField.delegate = self as? UITextFieldDelegate
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        showPassword()
+        return true
     }
 }
