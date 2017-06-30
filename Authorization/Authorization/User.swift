@@ -37,7 +37,6 @@ struct User: Mappable {
             switch response.result {
             case .success(let value):
                 let json = value as! [String: Any]
-                print(json)
                 let code = json["code"] as! Int
                 switch code {
                 case 0:

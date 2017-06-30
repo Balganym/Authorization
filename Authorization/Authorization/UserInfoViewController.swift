@@ -33,28 +33,29 @@ class UserInfoViewController: UIViewController {
     // MARK: - actions
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         Storage.user = nil
-        Storage.image = nil
+        Storage.deleteImage()
         appDelegate.openView()
     }
     
-    private func getImage() {
-        if Storage.image != nil {
-            spinner.stopAnimating()
-            imageView.image = Storage.image
-        } else {
-            GettingImage.fetchImage(with: user.avatar) { image in
-                Storage.image = image
-                self.getImage()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateUI()
+        // загрузка аватарку
+        spinner.startAnimating()
+        
+        Storage.setImage() { image in
+            if image == nil {
+                GettingImage.fetchImage(with: self.user.avatar) { image in
+                    Storage.addImage(image)
+                    self.imageView.image = image
+                    self.spinner.stopAnimating()
+                }
+                
+            } else {
+                self.imageView.image = image
+                self.spinner.stopAnimating()
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
-        // загрузка аватарки
-        spinner.startAnimating()
-        getImage()
         GettingImage.setRounded(imageView)
     }
 }

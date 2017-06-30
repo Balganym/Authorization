@@ -20,6 +20,8 @@ private struct Keys {
 
 struct Storage {
     
+    static var image: UIImage?
+    
     static var user: User? {
         get {
             if let json = Caches.jsonCache.object(forKey: Keys.user) {
@@ -39,16 +41,25 @@ struct Storage {
         }
     }
     
-    static var image: UIImage? {
-        get {
-            return Caches.imageCache.object(forKey: Keys.image)
+    static func setImage(completion: @escaping (UIImage?) -> Void) {
+        Caches.imageCache.async.object(forKey: Keys.image, completion: completion)
+    }
+    
+    static func addImage(_ image: UIImage) {
+        Caches.imageCache.async.addObject(image, forKey: Keys.image) { error in
+            print(error ?? "added")
         }
-        set {
-            if let newImage = newValue {
-                try! Caches.imageCache.addObject(newImage, forKey: Keys.image)
-            } else {
-                try! Caches.imageCache.removeObject(forKey: Keys.image)
-            }
+        Storage.image = image
+    }
+    
+    static func deleteImage() {
+        Caches.imageCache.async.removeObject(forKey: Keys.image) { error in
+            print(error ?? "deleted")
         }
+        Storage.image = nil
     }
 }
+
+
+
+
