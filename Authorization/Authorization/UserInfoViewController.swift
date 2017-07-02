@@ -37,9 +37,13 @@ class UserInfoViewController: UIViewController {
         appDelegate.openView()
     }
     
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        updateUI()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        updateUI()
         // загрузка аватарку
         spinner.startAnimating()
         

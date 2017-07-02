@@ -271,15 +271,9 @@
                                                         <rect key="frame" x="130" y="110" width="20" height="20"/>
                                                     </activityIndicatorView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUg-Hq-R1F">
-                                                        <rect key="frame" x="108" y="230" width="64" height="32"/>
+                                                        <rect key="frame" x="108.5" y="230" width="63.5" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKL-ch-VJK">
-                                                        <rect key="frame" x="123" y="263" width="35" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpe-UG-oWV">
@@ -289,17 +283,31 @@
                                                             <constraint firstAttribute="height" constant="1" id="piX-3b-53R"/>
                                                         </constraints>
                                                     </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Upj-EN-kNC">
+                                                        <rect key="frame" x="112" y="264.5" width="56" height="17.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="5mJ-GB-hLc">
+                                                                <rect key="frame" x="0.0" y="3" width="16" height="12"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKL-ch-VJK">
+                                                                <rect key="frame" x="21" y="0.5" width="35" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="hpe-UG-oWV" firstAttribute="top" secondItem="hKL-ch-VJK" secondAttribute="bottom" constant="10" id="0KH-XV-s6R"/>
                                                     <constraint firstItem="hpe-UG-oWV" firstAttribute="centerX" secondItem="tpF-LK-VyH" secondAttribute="centerX" id="1EO-Mt-bR6"/>
                                                     <constraint firstItem="FUg-Hq-R1F" firstAttribute="top" secondItem="kOR-hY-nm5" secondAttribute="bottom" constant="20" id="9Eq-JD-egH"/>
+                                                    <constraint firstItem="Upj-EN-kNC" firstAttribute="top" secondItem="FUg-Hq-R1F" secondAttribute="bottom" constant="3" id="As4-5s-Id5"/>
                                                     <constraint firstItem="kOR-hY-nm5" firstAttribute="top" secondItem="tpF-LK-VyH" secondAttribute="top" constant="30" id="Dbp-pW-cQH"/>
                                                     <constraint firstItem="kOR-hY-nm5" firstAttribute="leading" secondItem="tpF-LK-VyH" secondAttribute="leading" constant="50" id="HIz-oV-Ydd"/>
+                                                    <constraint firstItem="hpe-UG-oWV" firstAttribute="top" secondItem="Upj-EN-kNC" secondAttribute="bottom" constant="8" symbolic="YES" id="Ktm-97-wo7"/>
                                                     <constraint firstItem="kOR-hY-nm5" firstAttribute="centerY" secondItem="xlk-A2-Eee" secondAttribute="centerY" id="SzM-aM-mCc"/>
-                                                    <constraint firstItem="hKL-ch-VJK" firstAttribute="top" secondItem="FUg-Hq-R1F" secondAttribute="bottom" constant="1" id="XLp-cs-uha"/>
-                                                    <constraint firstItem="kOR-hY-nm5" firstAttribute="centerX" secondItem="hKL-ch-VJK" secondAttribute="centerX" id="YFs-dK-9Q9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Upj-EN-kNC" secondAttribute="bottom" constant="112" id="hRd-Fg-DMn"/>
                                                     <constraint firstItem="hpe-UG-oWV" firstAttribute="leading" secondItem="kOR-hY-nm5" secondAttribute="leading" id="hSz-Ma-3w8"/>
                                                     <constraint firstItem="kOR-hY-nm5" firstAttribute="centerX" secondItem="tpF-LK-VyH" secondAttribute="centerX" id="lHx-Tb-0ZU"/>
                                                     <constraint firstItem="kOR-hY-nm5" firstAttribute="centerX" secondItem="xlk-A2-Eee" secondAttribute="centerX" id="xE5-UR-h6y"/>
@@ -311,6 +319,7 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="tpF-LK-VyH" secondAttribute="bottom" constant="70" id="ILc-Gb-nXO"/>
                                             <constraint firstAttribute="trailing" secondItem="tpF-LK-VyH" secondAttribute="trailing" constant="20" id="SGh-QU-Lil"/>
+                                            <constraint firstItem="Upj-EN-kNC" firstAttribute="centerX" secondItem="men-fb-dZH" secondAttribute="centerX" id="Tmu-FT-Bz2"/>
                                             <constraint firstItem="tpF-LK-VyH" firstAttribute="centerX" secondItem="men-fb-dZH" secondAttribute="centerX" id="i2S-5Z-f0Z"/>
                                             <constraint firstItem="tpF-LK-VyH" firstAttribute="top" secondItem="men-fb-dZH" secondAttribute="top" constant="40" id="vtM-EF-BAV"/>
                                             <constraint firstItem="tpF-LK-VyH" firstAttribute="leading" secondItem="men-fb-dZH" secondAttribute="leading" constant="20" id="xUz-4h-q5J"/>
@@ -393,6 +402,7 @@
     <resources>
         <image name="bg" width="414" height="736"/>
         <image name="facebook" width="23" height="23"/>
+        <image name="mail" width="16" height="12"/>
     </resources>
     <color key="tintColor" red="0.43704956769999997" green="0.48698490859999999" blue="0.64878433940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
