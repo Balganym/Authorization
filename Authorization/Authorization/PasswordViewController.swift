@@ -64,5 +64,11 @@ class PasswordViewController: UIViewController, NVActivityIndicatorViewable {
             }
         }
     }
+
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        // чтобы автоматический появлялась клавиатура
+        passwordTextField.becomeFirstResponder()
+    }
 }
 
