@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408EE5D1F1289B90002E582 /* UserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408EE5C1F1289B90002E582 /* UserInfoTableViewController.swift */; };
 		041BE2C91F02E591001D600B /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BE2C81F02E591001D600B /* UserInfoViewController.swift */; };
 		0462B39A1F026A610098FDE7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462B3991F026A610098FDE7 /* Storage.swift */; };
 		0462B39E1F026CA60098FDE7 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462B39D1F026CA60098FDE7 /* Storyboard.swift */; };
-		0462B3A01F027E100098FDE7 /* gettingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462B39F1F027E100098FDE7 /* gettingImage.swift */; };
+		0462B3A01F027E100098FDE7 /* GettingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462B39F1F027E100098FDE7 /* GettingImage.swift */; };
 		0482829D1EFF066B00E81917 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482829C1EFF066B00E81917 /* PasswordViewController.swift */; };
 		048282A11EFF0E5A00E81917 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048282A01EFF0E5A00E81917 /* User.swift */; };
+		04AE0A571F0EBC9100457A06 /* PollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE0A561F0EBC9100457A06 /* PollTableViewCell.swift */; };
+		04AE0A591F0ECABE00457A06 /* PollsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE0A581F0ECABE00457A06 /* PollsTableViewController.swift */; };
+		04AE0A5B1F0ECE8F00457A06 /* Polls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE0A5A1F0ECE8F00457A06 /* Polls.swift */; };
 		04FA5FA31EFEE7000083FD75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA5FA21EFEE7000083FD75 /* AppDelegate.swift */; };
 		04FA5FA81EFEE7000083FD75 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FA5FA61EFEE7000083FD75 /* Authorization.storyboard */; };
 		04FA5FAA1EFEE7000083FD75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FA5FA91EFEE7000083FD75 /* Assets.xcassets */; };
@@ -22,12 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0408EE5C1F1289B90002E582 /* UserInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewController.swift; sourceTree = "<group>"; };
 		041BE2C81F02E591001D600B /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		0462B3991F026A610098FDE7 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		0462B39D1F026CA60098FDE7 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		0462B39F1F027E100098FDE7 /* gettingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gettingImage.swift; sourceTree = "<group>"; };
+		0462B39F1F027E100098FDE7 /* GettingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettingImage.swift; sourceTree = "<group>"; };
 		0482829C1EFF066B00E81917 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		048282A01EFF0E5A00E81917 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04AE0A561F0EBC9100457A06 /* PollTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollTableViewCell.swift; sourceTree = "<group>"; };
+		04AE0A581F0ECABE00457A06 /* PollsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollsTableViewController.swift; sourceTree = "<group>"; };
+		04AE0A5A1F0ECE8F00457A06 /* Polls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polls.swift; sourceTree = "<group>"; };
 		04FA5F9F1EFEE7000083FD75 /* Authorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FA5FA21EFEE7000083FD75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FA5FA71EFEE7000083FD75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
@@ -106,7 +114,8 @@
 				048282A01EFF0E5A00E81917 /* User.swift */,
 				0462B3991F026A610098FDE7 /* Storage.swift */,
 				0462B39D1F026CA60098FDE7 /* Storyboard.swift */,
-				0462B39F1F027E100098FDE7 /* gettingImage.swift */,
+				0462B39F1F027E100098FDE7 /* GettingImage.swift */,
+				04AE0A5A1F0ECE8F00457A06 /* Polls.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -117,6 +126,9 @@
 				04FA5FB81EFEE89A0083FD75 /* EmailViewController.swift */,
 				0482829C1EFF066B00E81917 /* PasswordViewController.swift */,
 				041BE2C81F02E591001D600B /* UserInfoViewController.swift */,
+				04AE0A561F0EBC9100457A06 /* PollTableViewCell.swift */,
+				04AE0A581F0ECABE00457A06 /* PollsTableViewController.swift */,
+				0408EE5C1F1289B90002E582 /* UserInfoTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,11 +276,15 @@
 			files = (
 				04FA5FA31EFEE7000083FD75 /* AppDelegate.swift in Sources */,
 				041BE2C91F02E591001D600B /* UserInfoViewController.swift in Sources */,
-				0462B3A01F027E100098FDE7 /* gettingImage.swift in Sources */,
+				0462B3A01F027E100098FDE7 /* GettingImage.swift in Sources */,
 				04FA5FB91EFEE89A0083FD75 /* EmailViewController.swift in Sources */,
 				0462B39E1F026CA60098FDE7 /* Storyboard.swift in Sources */,
+				04AE0A5B1F0ECE8F00457A06 /* Polls.swift in Sources */,
 				048282A11EFF0E5A00E81917 /* User.swift in Sources */,
+				04AE0A591F0ECABE00457A06 /* PollsTableViewController.swift in Sources */,
 				0482829D1EFF066B00E81917 /* PasswordViewController.swift in Sources */,
+				04AE0A571F0EBC9100457A06 /* PollTableViewCell.swift in Sources */,
+				0408EE5D1F1289B90002E582 /* UserInfoTableViewController.swift in Sources */,
 				0462B39A1F026A610098FDE7 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +415,7 @@
 				INFOPLIST_FILE = Authorization/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = meshcubator.Authorization;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meshcubator.Authorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -414,7 +430,7 @@
 				INFOPLIST_FILE = Authorization/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = meshcubator.Authorization;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meshcubator.Authorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

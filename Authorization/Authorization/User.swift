@@ -15,13 +15,20 @@ struct User: Mappable {
     var email = ""
     var name = ""
     var avatar = ""
+    var answerCount = 0
+    var pollCount = 0
+    var rating = 0
     
     init?(map: Map) { }
+    
     mutating func mapping(map: Map) {
         id <- map["user.id"]
         email <- map["user.email"]
         name <- map["user.full_name"]
         avatar <- map["user.avatar"]
+        answerCount <- map["user.answer_count"]
+        pollCount <- map["user.poll_count"]
+        rating <- map["user.rating"]
     }
     
     // авторизация пользователя
@@ -37,6 +44,7 @@ struct User: Mappable {
             switch response.result {
             case .success(let value):
                 let json = value as! [String: Any]
+                print(json)
                 let code = json["code"] as! Int
                 switch code {
                 case 0:

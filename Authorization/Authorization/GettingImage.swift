@@ -16,10 +16,13 @@ private struct Constants {
 struct GettingImage {
     
     static func fetchImage(with url: String,
-                           completion: @escaping (UIImage) -> Void) {
+                           completion: @escaping (UIImage?) -> Void) {
         Alamofire.request(url).responseImage { response in
             if let image = response.result.value {
+                Storage.addImage(url: url, image)
                 completion(image)
+            } else {
+                completion(nil)
             }
         }
     }

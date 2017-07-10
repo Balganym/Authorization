@@ -8,20 +8,20 @@
 
 import Cache
 
+// MARK: - caches
 private struct Caches {
     static let jsonCache = SpecializedCache<JSON>(name: "JSON Cache")
     static let imageCache = SpecializedCache<UIImage>(name: "image Cache")
 }
 
+// MARK: - keys
 private struct Keys {
     static let user = "User"
-    static let image = "Image"
 }
 
 struct Storage {
     
-    static var image: UIImage?
-    
+    // MARK: - variables
     static var user: User? {
         get {
             if let json = Caches.jsonCache.object(forKey: Keys.user) {
@@ -41,22 +41,21 @@ struct Storage {
         }
     }
     
-    static func setImage(completion: @escaping (UIImage?) -> Void) {
-        Caches.imageCache.async.object(forKey: Keys.image, completion: completion)
+    // MARK: - internal functions
+    // Вытаскиваем с картинку кэша
+    static func setImage(url key: String, completion: @escaping (UIImage?) -> Void) {
+        Caches.imageCache.async.object(forKey: key, completion: completion)
     }
     
-    static func addImage(_ image: UIImage) {
-        Caches.imageCache.async.addObject(image, forKey: Keys.image) { error in
-            print(error ?? "added")
-        }
-        Storage.image = image
+    // Добавляем картинку в кэш
+    static func addImage(url key: String, _ image: UIImage) {
+//        print(key)
+        Caches.imageCache.async.addObject(image, forKey: key)
     }
     
-    static func deleteImage() {
-        Caches.imageCache.async.removeObject(forKey: Keys.image) { error in
-            print(error ?? "deleted")
-        }
-        Storage.image = nil
+    // Очищаем кэш
+    static func clearPollsImageCache() {
+        Caches.imageCache.async.clear()
     }
 }
 

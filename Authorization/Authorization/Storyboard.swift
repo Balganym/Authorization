@@ -13,7 +13,7 @@ private struct Constants {
     
     static let authorizationNC = "mainView"
     
-    static let userInfoNC = "User Info"
+    static let userInfoNC = "Polls"
 }
 
 struct Storyboard {

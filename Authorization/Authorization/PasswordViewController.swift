@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 
 // MARK: - constants
 private struct Constants {
-    static let userInfoSegue = "Show Info"
+    static let userInfoSegue = "Show Polls"
 }
 
 class PasswordViewController: UIViewController, NVActivityIndicatorViewable {
