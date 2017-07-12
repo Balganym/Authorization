@@ -49,7 +49,7 @@ class UserInfoTableViewController: UITableViewController {
     // MARK: - actions
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         Storage.user = nil
-        Storage.clearPollsImageCache()
+        GettingImage.clearPollsImageCache()
         appDelegate.openView()
     }
     
@@ -66,7 +66,7 @@ class UserInfoTableViewController: UITableViewController {
         
         let url = user.avatar
         // загрузка аватарки
-        Storage.setImage(url: url) { image in
+        GettingImage.getImage(url: url) { image in
             if image == nil {
                 GettingImage.fetchImage(with: url) { image in
                     self.avatarImageView.image = image
@@ -78,12 +78,5 @@ class UserInfoTableViewController: UITableViewController {
                 self.spinner.stopAnimating()
             }
         }
-    }
-    
-    // меняем границы аватарки
-    override func viewDidLayoutSubviews() {
-        super .viewDidLayoutSubviews()
-        
-        GettingImage.setRounded(avatarImageView)
     }
 }

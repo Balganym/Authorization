@@ -17,6 +17,11 @@
 		04AE0A571F0EBC9100457A06 /* PollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE0A561F0EBC9100457A06 /* PollTableViewCell.swift */; };
 		04AE0A591F0ECABE00457A06 /* PollsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE0A581F0ECABE00457A06 /* PollsTableViewController.swift */; };
 		04AE0A5B1F0ECE8F00457A06 /* Polls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE0A5A1F0ECE8F00457A06 /* Polls.swift */; };
+		04F484801F15E297009A45FD /* AttributedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4847F1F15E297009A45FD /* AttributedImageView.swift */; };
+		04F484851F15E66C009A45FD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F484811F15E66C009A45FD /* Bolts.framework */; };
+		04F484861F15E66C009A45FD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F484821F15E66C009A45FD /* FBSDKCoreKit.framework */; };
+		04F484871F15E66C009A45FD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F484831F15E66C009A45FD /* FBSDKLoginKit.framework */; };
+		04F484881F15E66C009A45FD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F484841F15E66C009A45FD /* FBSDKShareKit.framework */; };
 		04FA5FA31EFEE7000083FD75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA5FA21EFEE7000083FD75 /* AppDelegate.swift */; };
 		04FA5FA81EFEE7000083FD75 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FA5FA61EFEE7000083FD75 /* Authorization.storyboard */; };
 		04FA5FAA1EFEE7000083FD75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FA5FA91EFEE7000083FD75 /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 		04AE0A561F0EBC9100457A06 /* PollTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollTableViewCell.swift; sourceTree = "<group>"; };
 		04AE0A581F0ECABE00457A06 /* PollsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollsTableViewController.swift; sourceTree = "<group>"; };
 		04AE0A5A1F0ECE8F00457A06 /* Polls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polls.swift; sourceTree = "<group>"; };
+		04F4847F1F15E297009A45FD /* AttributedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedImageView.swift; sourceTree = "<group>"; };
+		04F484811F15E66C009A45FD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		04F484821F15E66C009A45FD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		04F484831F15E66C009A45FD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		04F484841F15E66C009A45FD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		04FA5F9F1EFEE7000083FD75 /* Authorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FA5FA21EFEE7000083FD75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FA5FA71EFEE7000083FD75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
@@ -54,6 +64,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BE6B50781BC54923FFC1354 /* Pods_Authorization.framework in Frameworks */,
+				04F484861F15E66C009A45FD /* FBSDKCoreKit.framework in Frameworks */,
+				04F484881F15E66C009A45FD /* FBSDKShareKit.framework in Frameworks */,
+				04F484871F15E66C009A45FD /* FBSDKLoginKit.framework in Frameworks */,
+				04F484851F15E66C009A45FD /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +130,7 @@
 				0462B39D1F026CA60098FDE7 /* Storyboard.swift */,
 				0462B39F1F027E100098FDE7 /* GettingImage.swift */,
 				04AE0A5A1F0ECE8F00457A06 /* Polls.swift */,
+				04F4847F1F15E297009A45FD /* AttributedImageView.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -145,6 +160,10 @@
 		D826DC13EC48553607072AFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04F484811F15E66C009A45FD /* Bolts.framework */,
+				04F484821F15E66C009A45FD /* FBSDKCoreKit.framework */,
+				04F484831F15E66C009A45FD /* FBSDKLoginKit.framework */,
+				04F484841F15E66C009A45FD /* FBSDKShareKit.framework */,
 				356B799D9BC91F932FAB0395 /* Pods_Authorization.framework */,
 			);
 			name = Frameworks;
@@ -276,6 +295,7 @@
 			files = (
 				04FA5FA31EFEE7000083FD75 /* AppDelegate.swift in Sources */,
 				041BE2C91F02E591001D600B /* UserInfoViewController.swift in Sources */,
+				04F484801F15E297009A45FD /* AttributedImageView.swift in Sources */,
 				0462B3A01F027E100098FDE7 /* GettingImage.swift in Sources */,
 				04FA5FB91EFEE89A0083FD75 /* EmailViewController.swift in Sources */,
 				0462B39E1F026CA60098FDE7 /* Storyboard.swift in Sources */,
@@ -412,6 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64GBCYYHR6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Authorization/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -427,6 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64GBCYYHR6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Authorization/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

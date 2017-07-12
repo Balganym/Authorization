@@ -29,7 +29,6 @@ class PollsTableViewController: UITableViewController, NVActivityIndicatorViewab
     
     // сколько строк в секции
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        stopAnimating()
         return polls.count
     }
     
@@ -43,9 +42,8 @@ class PollsTableViewController: UITableViewController, NVActivityIndicatorViewab
     
     // Получаем опросы
     private func getPolls() {
-        
         Polls.getPolls() { results, message in
-            
+            self.stopAnimating()
             if let message = message {
                 self.showAlert("Oшибка", message)
             } else {

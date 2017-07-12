@@ -38,12 +38,12 @@ class PollTableViewCell: UITableViewCell {
         
         let url = poll.image
         
-        Storage.setImage(url: url) { image in
+        GettingImage.getImage(url: url) { image in
             if image == nil {
                 GettingImage.fetchImage(with: url) { image in
                     
                     if let image = image {
-                        Storage.addImage(url: url, image)
+                        GettingImage.addImage(url: url, image)
                         self.pollImageView.image = image
                     } else {
                         self.pollImageView.image = #imageLiteral(resourceName: "bg")

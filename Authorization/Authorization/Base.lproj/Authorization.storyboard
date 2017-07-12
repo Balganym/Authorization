@@ -73,10 +73,10 @@
                                         <rect key="frame" x="64.5" y="450" width="192.5" height="23"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="Bur-Vf-c0I">
-                                                <rect key="frame" x="0.5" y="0.0" width="23" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="войти через facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tud-q0-SG0">
-                                                <rect key="frame" x="28.5" y="2" width="164.5" height="19.5"/>
+                                                <rect key="frame" x="28" y="2" width="164.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.67601895329999995" green="0.71543544530000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -189,10 +189,10 @@
                                         <rect key="frame" x="64.5" y="450" width="192.5" height="23"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="3su-ou-4c1">
-                                                <rect key="frame" x="0.5" y="0.0" width="23" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="войти через facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iks-RB-7OH">
-                                                <rect key="frame" x="28.5" y="2" width="164.5" height="19.5"/>
+                                                <rect key="frame" x="28" y="2" width="164.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.67601895329999995" green="0.71543544530000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -243,7 +243,6 @@
         <!--User Info View Controller-->
         <scene sceneID="Q1z-8L-Fod">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mhy-ZI-0J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="tYI-UQ-zeJ" customClass="UserInfoViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p8x-ai-mZa"/>
@@ -361,6 +360,7 @@
                         <outlet property="spinner" destination="xlk-A2-Eee" id="ciT-g6-6qt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhy-ZI-0J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5138" y="144"/>
         </scene>
@@ -384,12 +384,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="298.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gc-4d-f8W">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gc-4d-f8W" customClass="AttributedImageView" customModule="Authorization" customModuleProvider="target">
                                                     <rect key="frame" x="110" y="30" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Abr-4r-c4Z"/>
                                                         <constraint firstAttribute="height" constant="100" id="YU2-oo-D66"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.43529411759999997" green="0.48627450979999998" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="full name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-uT-9dI">
                                                     <rect key="frame" x="16" y="160" width="288" height="29"/>

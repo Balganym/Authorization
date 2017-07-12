@@ -19,7 +19,7 @@ struct GettingImage {
                            completion: @escaping (UIImage?) -> Void) {
         Alamofire.request(url).responseImage { response in
             if let image = response.result.value {
-                Storage.addImage(url: url, image)
+                self.addImage(url: url, image)
                 completion(image)
             } else {
                 completion(nil)
@@ -27,12 +27,23 @@ struct GettingImage {
         }
     }
     
-    static func setRounded(_ imageView: UIImageView) {
-        imageView.layer.borderWidth = 1.5
-        imageView.layer.borderColor = Constants.borderColor
-        imageView.layer.cornerRadius = imageView.frame.width / 2
-        imageView.layer.masksToBounds = true
+    // MARK: - internal functions
+    // Вытаскиваем с картинку кэша
+    static func getImage(url key: String, completion: @escaping (UIImage?) -> Void) {
+        Caches.imageCache.async.object(forKey: key, completion: completion)
     }
+    
+    // Добавляем картинку в кэш
+    static func addImage(url key: String, _ image: UIImage) {
+        //        print(key)
+        Caches.imageCache.async.addObject(image, forKey: key)
+    }
+    
+    // Очищаем кэш
+    static func clearPollsImageCache() {
+        Caches.imageCache.async.clear()
+    }
+    
 }
 
 

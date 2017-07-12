@@ -9,7 +9,7 @@
 import Cache
 
 // MARK: - caches
-private struct Caches {
+struct Caches {
     static let jsonCache = SpecializedCache<JSON>(name: "JSON Cache")
     static let imageCache = SpecializedCache<UIImage>(name: "image Cache")
 }
@@ -39,23 +39,6 @@ struct Storage {
                 try! Caches.jsonCache.removeObject(forKey: Keys.user)
             }
         }
-    }
-    
-    // MARK: - internal functions
-    // Вытаскиваем с картинку кэша
-    static func setImage(url key: String, completion: @escaping (UIImage?) -> Void) {
-        Caches.imageCache.async.object(forKey: key, completion: completion)
-    }
-    
-    // Добавляем картинку в кэш
-    static func addImage(url key: String, _ image: UIImage) {
-//        print(key)
-        Caches.imageCache.async.addObject(image, forKey: key)
-    }
-    
-    // Очищаем кэш
-    static func clearPollsImageCache() {
-        Caches.imageCache.async.clear()
     }
 }
 
